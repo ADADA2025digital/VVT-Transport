@@ -90,23 +90,22 @@ const ArticleSection = () => {
 
       <div className="container position-relative">
         <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <motion.div
-              className="vv-article-heading text-center"
-              variants={headingVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="vv-article-title">
-                Latest from Our <span>Article</span>
-              </h2>
-              <p className="vv-article-subtitle">
-                A showcase of our recent car bodywork project demonstrating
-                our expertise and quality craftsmanship
-              </p>
-            </motion.div>
-          </div>
+         <div className="col-lg-8">
+  <motion.div
+    className="vv-article-heading text-center"
+    variants={headingVariant}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+  >
+    <h2 className="vv-article-title">
+      Latest from Our <span>Articles</span>
+    </h2>
+    <p className="vv-article-subtitle">
+      Insights on fleet painting, branding, and maintenance for commercial vehicles.
+    </p>
+  </motion.div>
+</div>
         </div>
 
         <div className="row align-items-stretch g-4 mt-4">

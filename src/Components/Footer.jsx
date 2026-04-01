@@ -49,21 +49,24 @@ const Footer = () => {
                 <h5 className="vv-footer-title">Contact</h5>
 
                 <div className="vv-footer-contact">
-                  <a href="tel:+123456789" className="vv-footer-link">
-                    123 456 789
-                  </a>
-
-                  <a href="mailto:example@gmail.com" className="vv-footer-link">
-                    example@gmail.com
+                  <a href="tel:+61200000000" className="vv-footer-link">
+                    +61 2 0000 0000
                   </a>
 
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=123+2nd+main+street"
+                    href="mailto:info@vvtranscoats.au"
+                    className="vv-footer-link"
+                  >
+                    info@vvtranscoats.au
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Factory+10+13+Swaffham+Road+Minto+NSW+2566"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="vv-footer-link"
                   >
-                    123 2nd main street
+                    Factory 10/13 Swaffham Road, Minto NSW
                   </a>
                 </div>
               </div>
@@ -119,9 +122,11 @@ const Footer = () => {
 
           {/* BOTTOM LINE */}
           <div className="vv-footer-bottom">
-            <div className="container text-center">
-              <p className="mb-0">Copyright © 2025. All rights Reserved</p>
-            </div>
+         <div className="container text-center">
+  <p className="mb-0">
+    Copyright © {new Date().getFullYear()}. All rights Reserved
+  </p>
+</div>
           </div>
         </div>
       </div>

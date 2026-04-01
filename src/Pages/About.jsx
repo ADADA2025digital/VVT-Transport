@@ -63,32 +63,33 @@ function AboutUs() {
           <div className="container">
             <div className="row align-items-center g-4 g-lg-5">
               {/* LEFT */}
-              <div className="col-lg-6">
-                <motion.div
-                  className="about-v3-left"
-                  variants={textVariant}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.25 }}
-                >
-                  <h2 className="about-v3-title text-center text-md-start display-2 fw-bold">
-                    <span>Who</span> we are?
-                  </h2>
+             <div className="col-lg-6">
+  <motion.div
+    className="about-v3-left"
+    variants={textVariant}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.25 }}
+  >
+    <h2 className="about-v3-title text-center text-md-start display-2 fw-bold">
+      <span>Who</span> we are?
+    </h2>
 
-                  <p className="about-v3-text text-center text-md-start px-4 px-md-0 ">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, em aperiam,
-                    eaque ipsa quae ab illo inventore et quasi architecto
-                    beatae vitae dicta sunt Nemo enim ipsam
-                  </p>
+    <p className="about-v3-text text-center text-md-start px-4 px-md-0 ">
+      At VV Transcoats, we specialize in commercial fleet painting,
+      branding, and debranding services for transport operators. Based
+      in Minto, NSW, we deliver durable finishes designed for heavy
+      vehicle use and long-term performance on the road.
+    </p>
 
-                  <p className="about-v3-text text-center text-md-start px-4 px-md-0 ">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, em aperiam,
-                    eaque ipsa quae ab illo inventore et quasi
-                  </p>
-                </motion.div>
-              </div>
+    <p className="about-v3-text text-center text-md-start px-4 px-md-0 ">
+      Our team focuses on precision, efficiency, and consistent results
+      across every project. From full fleet resprays to branding and
+      restoration, we ensure every vehicle maintains a clean,
+      professional and reliable appearance.
+    </p>
+  </motion.div>
+</div>
 
               {/* RIGHT */}
               <div className="col-lg-6">

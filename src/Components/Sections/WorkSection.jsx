@@ -75,23 +75,22 @@ const WorkSection = () => {
     <section className="vv-work-section">
       <div className="container position-relative">
         <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <motion.div
-              className="vv-work-heading text-center"
-              variants={headingVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="vv-work-title">
-                Our Recent <span>Works</span> and <span>Case Studies</span>
-              </h2>
-              <p className="vv-work-subtitle">
-                A showcase of our recent car bodywork project demonstrating
-                our expertise and quality craftsmanship
-              </p>
-            </motion.div>
-          </div>
+       <div className="col-lg-8">
+  <motion.div
+    className="vv-work-heading text-center"
+    variants={headingVariant}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+  >
+    <h2 className="vv-work-title">
+      Our Recent <span>Projects</span> & <span>Case Studies</span>
+    </h2>
+    <p className="vv-work-subtitle">
+     Showcasing our latest fleet transformations across painting, branding, and restoration.
+    </p>
+  </motion.div>
+</div>
         </div>
 
         <motion.div

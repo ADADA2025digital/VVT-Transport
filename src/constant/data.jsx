@@ -1,48 +1,43 @@
 import heroImage1 from "../assets/images/hero1.png";
 import heroImage2 from "../assets/images/hero1.png";
 import heroImage3 from "../assets/images/hero1.png";
-import heroImage4 from "../assets/images/hero1.png";
 
 export const heroData = [
   {
     titleWhite: "Precision",
-    titleHighlight: "Heavy Vehicle Paint",
-    titleBottom: "with a lasting shine",
+    titleHighlight: "Fleet Painting",
+    titleBottom: "built for the road",
     description:
-      "Protection, color change, and restoration crafted for enthusiasts",
-    primaryBtnText: "Our Services",
+      "High-performance spray painting for trucks, trailers, and commercial vehicles with durable, long-lasting finishes.",
+      primaryBtnText: "Our Services",
+    primaryBtnLink: "/service",
     secondaryBtnText: "Contact Us",
+    secondaryBtnLink: "/contact",
     image: heroImage1,
   },
   {
-    titleWhite: "Premium",
-    titleHighlight: "Vehicle Detailing",
-    titleBottom: "for every journey",
+    titleWhite: "Professional",
+    titleHighlight: "Fleet Branding",
+    titleBottom: "that stands out",
     description:
-      "Premium detailing and paint services for heavy vehicles and transport fleets",
-    primaryBtnText: "Our Services",
+      "Transform your vehicles into moving billboards with accurate branding, custom colors, and corporate identity alignment.",
+     primaryBtnText: "Our Services",
+    primaryBtnLink: "/service",
     secondaryBtnText: "Contact Us",
+    secondaryBtnLink: "/contact",
     image: heroImage2,
   },
   {
-    titleWhite: "Advanced",
-    titleHighlight: "Paint Protection",
-    titleBottom: "with premium finish",
-    description:
-      "Long-lasting vehicle protection, restoration, and color enhancement solutions",
-    primaryBtnText: "Our Services",
-    secondaryBtnText: "Contact Us",
-    image: heroImage3,
-  },
-  {
     titleWhite: "Complete",
-    titleHighlight: "Body Restoration",
-    titleBottom: "for a bold presence",
+    titleHighlight: "Debranding & Restore",
+    titleBottom: "ready for next use",
     description:
-      "High-quality restoration crafted with precision, shine, and durability",
+      "Clean debranding, full resprays, and restoration services to prepare vehicles for resale, lease return, or rebranding.",
     primaryBtnText: "Our Services",
+    primaryBtnLink: "/service",
     secondaryBtnText: "Contact Us",
-    image: heroImage4,
+    secondaryBtnLink: "/contact",
+    image: heroImage3,
   },
 ];
 
@@ -55,99 +50,94 @@ export const servicesData = [
   {
     id: 1,
     image: ser1,
-    title: "Paint Refinishing",
+    title: "Commercial Vehicle Painting",
     description:
-      "Professional color matching & spray painting for a flawless finish.",
+      " Premium spray painting services for trucks, trailers, and vans using industry-leading coatings. ",
   },
   {
     id: 2,
     image: ser2,
-    title: "Dent & Scratch Repair",
+    title: "Fleet Branding",
     description:
-      "Fixing dents, scratches and dings to restore your car's bodyworks",
+      "Transforming your vehicles into powerful marketing assets with precise logo application and custom color schemes. ",
   },
   {
     id: 3,
     image: ser3,
-    title: "Full Body Painting",
+    title: "Professional Debranding",
     description:
-      "Complete car repainting for a new, refreshed & uniform lock.",
+      "Clean and efficient removal of existing branding, preparing vehicles for resale or lease return. ",
   },
   {
     id: 4,
     image: ser4,
-    title: "Bumper Repair",
+    title: "Restoration & Refurbishment",
     description:
-      "Repair or replace damaged bumpers for a seamless appearance",
+      "Bringing tired or weathered commercial vehicles back to showroom quality. ",
   },
 ];
-
-
 
 import wrk1 from "../assets/images/wrk1.png";
 import wrk2 from "../assets/images/wrk2.png";
 import wrk3 from "../assets/images/wrk3.png";
 import wrk4 from "../assets/images/wrk4.png";
-
+import wrk5 from "../assets/images/wrk4.png";
 
 export const worksData = [
   {
     id: 1,
     image: wrk1,
-    title: "Full Body Repainting for Honda",
+    title: "Full Fleet Respray for Trucks",
   },
   {
     id: 2,
     image: wrk2,
-    title: "Painting for BMW",
+    title: "Trailer Branding for Logistics",
   },
   {
     id: 3,
     image: wrk3,
-    title: "Scratch repair on SUV",
+    title: "Fleet Debranding for Lease Return",
   },
   {
     id: 4,
     image: wrk4,
-    title: "Custom Paint on BMW m4",
+    title: "Custom Fleet Colour Upgrade",
   },
-   {
+  {
     id: 5,
-    image: wrk4,
-    title: "Custom Paint on BMW m4",
+    image: wrk5,
+    title: "Rigid Truck Restoration Work",
   },
-
 ];
-
-
 
 export const reviewsData = [
   {
     id: 1,
     quote:
-      "Contrary to popular belief Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from",
-    name: "Kerly, Sydney",
+      "Great quality work and fast service. Our fleet looks clean and professional.",
+    name: "Client, Sydney",
     active: false,
   },
   {
     id: 2,
     quote:
-      "Contrary to popular belief Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from",
-    name: "Rajan, Sydney",
+      "Very happy with the branding. Everything was done perfectly.",
+    name: "Client, NSW",
     active: false,
   },
   {
     id: 3,
     quote:
-      "Contrary to popular belief Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from",
-    name: "Divya, Sydney",
+      "Quick turnaround and reliable team. Highly recommended.",
+    name: "Client, Sydney",
     active: false,
   },
-    {
+  {
     id: 4,
     quote:
-      "Contrary to popular belief Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from",
-    name: "Divya, Sydney",
+      "Good finish and professional service from start to end.",
+    name: "Client, NSW",
     active: false,
   },
 ];
@@ -159,43 +149,31 @@ import art4 from "../assets/images/ar3.png";
 
 export const articleMainData = {
   image: art1,
-  title: "At vero eos et accusamus",
+  title: "Fleet Painting & Branding Solutions",
   description:
-    "On the other hand, we denounce with righte dislike men who are....",
+    "High-quality fleet painting and branding services designed for durability and long-term performance....",
 };
 
 export const articleSideData = [
   {
     id: 1,
     image: art2,
-    title: "At vero eos et accusamus",
-    description: "On the other hand, we denounce dislike men who are....",
+    title: "Fleet Branding Process",
+    description: "Professional branding solutions for trucks and trailers....",
   },
   {
     id: 2,
     image: art3,
-    title: "At vero eos et accusamus",
-    description: "On the other hand, we denounce dislike men who are....",
+    title: "Debranding Services",
+    description: "Clean removal of logos and decals for lease return....",
   },
   {
     id: 3,
     image: art4,
-    title: "At vero eos et accusamus",
-    description: "On the other hand, we denounce dislike men who are....",
+    title: "Fleet Maintenance Tips",
+    description: "Keep your fleet looking clean and professional always....",
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
 
 import trust1 from "../assets/images/trust1.png";
 import trust2 from "../assets/images/trust2.png";
@@ -206,12 +184,12 @@ export const trustData = [
   {
     id: 1,
     icon: trust1,
-    title: "Premium Quality Paint",
+    title: "Elite Fleet Finishing",
   },
   {
     id: 2,
     icon: trust2,
-    title: "Experienced Staff",
+    title: "Experienced Team",
   },
   {
     id: 3,
@@ -221,72 +199,56 @@ export const trustData = [
   {
     id: 4,
     icon: trust4,
-    title: "Customer Satisfaction",
+    title: "Reliable Service",
   },
-   {
+  {
     id: 5,
     icon: trust4,
-    title: "Customer Satisfaction",
+    title: "Fast Turnaround",
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 import team1 from "../assets/images/team1.png";
 import team2 from "../assets/images/team2.png";
 import team3 from "../assets/images/team3.png";
+import team4 from "../assets/images/team3.png";
 
 export const teamData = [
   {
     id: 1,
     image: team1,
     name: "K.S. Malik",
-    role: "Painter",
+    role: "Senior Painter",
   },
   {
     id: 2,
     image: team2,
     name: "R.J. Kamal",
-    role: "Painter",
+    role: "Branding Specialist",
   },
   {
     id: 3,
     image: team3,
     name: "P.L. Ram",
-    role: "Painter",
+    role: "Workshop Technician",
   },
-   {
-    id: 3,
-    image: team3,
-    name: "P.L. Ram",
-    role: "Painter",
+  {
+    id: 4,
+    image: team4,
+    name: "A. Kumar",
+    role: "Fleet Technician",
   },
 ];
-
-
 
 export const countData = [
   {
     id: 1,
-    number: "100+",
-    label: "Cars Painted",
+    number: "150+",
+    label: "Fleet Vehicles Painted",
   },
   {
     id: 2,
-    number: "2+",
+    number: "5+",
     label: "Years Experience",
   },
   {
@@ -296,14 +258,10 @@ export const countData = [
   },
   {
     id: 4,
-    number: "80",
-    label: "of Happy Customers",
+    number: "120+",
+    label: "Happy Clients",
   },
 ];
-
-
-
-
 
 import service1 from "../assets/images/service1.png";
 import service2 from "../assets/images/service1.png";
@@ -314,76 +272,64 @@ export const serviceOfferData = [
   {
     id: 1,
     image: service1,
-    title: "Full Painting",
+    title: "Fleet Painting",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque",
-    price: "$5,999",
-    duration: "tx",
+      "Professional spray painting for trucks and commercial fleet vehicles",
+    price: "Quote",
+    duration: "N/A",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Fleet Specialists",
+      "Fast Turnaround",
+      "Durable Finishes",
+      "All Vehicle Types",
     ],
   },
   {
     id: 2,
     image: service2,
-    title: "Full Painting",
+    title: "Fleet Branding",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque",
-    price: "$5,999",
-    duration: "tx",
+      "Accurate logo and branding solutions for commercial transport fleets",
+    price: "Quote",
+    duration: "N/A",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Logo Precision",
+      "Brand Consistency",
+      "Professional Finish",
+      "All Fleet Sizes",
     ],
   },
   {
     id: 3,
     image: service3,
-    title: "Full Painting",
+    title: "Debranding",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque",
-    price: "$5,999",
-    duration: "tx",
+      "Clean removal of decals and branding for resale or lease return",
+    price: "Quote",
+    duration: "N/A",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "No Residue",
+      "Clean Finish",
+      "Quick Service",
+      "Lease Ready",
     ],
   },
   {
     id: 4,
     image: service4,
-    title: "Full Painting",
+    title: "Restoration",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque",
-    price: "$5,999",
-    duration: "tx",
+      "Refurbishment of damaged or faded commercial vehicles",
+    price: "Quote",
+    duration: "N/A",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Surface Repair",
+      "Paint Refresh",
+      "Professional Finish",
+      "Long Lasting",
     ],
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
 
 import exp1 from "../assets/images/ex1.png";
 import exp2 from "../assets/images/ex1.png";
@@ -392,71 +338,64 @@ export const expertiseData = [
   {
     id: 1,
     badge: "Most Popular",
-    title: "Complete Car Care Package",
+    title: "Complete Fleet Package",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque laudantium,",
+      "Full fleet painting, branding, and restoration solutions for businesses",
     features: [
-      "Certified Mechanics",
+      "Fleet Specialists",
       "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Durable Finish",
+      "All Fleet Types",
     ],
-    price: "$5,999",
+    price: "Quote",
     buttonText: "Book Now",
     image: exp1,
   },
   {
     id: 2,
     badge: "Most Popular",
-    title: "Full Car Body Painting",
+    title: "Fleet Branding Package",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque laudantium,",
+      "Professional branding solutions for trucks and trailers",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Accurate Logos",
+      "Consistent Branding",
+      "Quick Execution",
+      "All Fleet Sizes",
     ],
-    price: "$6,999",
+    price: "Quote",
     buttonText: "Book Now",
     image: exp2,
   },
-    {
+  {
     id: 3,
     badge: "Most Popular",
-    title: "Full Car Body Painting",
+    title: "Fleet Restoration",
     description:
-      "Sed ut perspiciatis unde Omnis iste natus error sit voluptatem accusantium doloremque laudantium,",
+      "Complete repaint and restoration for commercial vehicles",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Surface Repair",
+      "Full Repaint",
+      "Durable Finish",
+      "Long Lasting",
     ],
-    price: "$6,999",
+    price: "Quote",
     buttonText: "Book Now",
     image: exp2,
   },
 ];
 
-
-
-
-
-
-
-
 export const pricingData = [
   {
     id: 1,
     title: "Basic",
-    price: "$3,999",
-    duration: "/year",
+    price: "Quote",
+    duration: "",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Fleet Painting",
+      "Basic Branding",
+      "Standard Finish",
+      "Quick Service",
     ],
     buttonText: "Choose Basic",
     highlighted: false,
@@ -465,13 +404,13 @@ export const pricingData = [
   {
     id: 2,
     title: "Pro",
-    price: "$7,999",
-    duration: "/year",
+    price: "Quote",
+    duration: "",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Full Branding",
+      "Premium Finish",
+      "Fast Turnaround",
+      "All Fleet Types",
     ],
     buttonText: "Choose Pro",
     highlighted: true,
@@ -480,25 +419,19 @@ export const pricingData = [
   {
     id: 3,
     title: "Premium",
-    price: "$12,999",
-    duration: "/year",
+    price: "Quote",
+    duration: "",
     features: [
-      "Certified Mechanics",
-      "Fast Service",
-      "Affordable Pricing",
-      "All Car Brands Supported",
+      "Full Respray",
+      "Complete Branding",
+      "High Durability",
+      "Priority Service",
     ],
-    buttonText: "Choose Pre",
+    buttonText: "Choose Premium",
     highlighted: false,
     badge: "",
   },
 ];
-
-
-
-
-
-
 
 import b1 from "../assets/images/b1.png";
 import b2 from "../assets/images/b2.png";
@@ -508,53 +441,49 @@ import b5 from "../assets/images/b1.png";
 
 export const blogFeaturedPost = {
   id: 1,
-  slug: "at-vero-eos-et-accusamus",
+  slug: "fleet-painting-and-branding",
   image: b1,
   date: "20 Dec 2025",
-  title: "At vero eos et accusamus",
+  title: "Fleet Painting & Branding",
   description:
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae vitae dicta sunt Nemo enim ipsam..........",
+    "Professional fleet painting and branding services designed for durability and long-term performance on the road..........",
   content: `
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    Fleet painting and branding play a major role in maintaining a professional business image.
 
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+    A well-maintained fleet improves brand visibility and customer trust.
+    Regular maintenance ensures long-lasting performance and durability.
 
-    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
-    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+    Investing in professional services helps protect your vehicles and enhances your company’s presence.
   `,
 };
 
 export const blogSidePostsLeft = [
   {
     id: 2,
-    slug: "at-vero-eos-left-1",
+    slug: "fleet-branding-process",
     image: b2,
     date: "23 Dec 2024",
-    title: "At vero eos",
-    description: "Sed ut perspiciatis unde ste natus error sit...",
+    title: "Fleet Branding Process",
+    description: "Professional branding methods for heavy vehicles...",
     content: `
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-      Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Fleet branding helps businesses create a strong and consistent image on the road.
+      Accurate logo placement and colour matching improve brand visibility.
 
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-      Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+      A professional branding process ensures every vehicle reflects the same corporate identity.
     `,
   },
   {
     id: 3,
-    slug: "at-vero-eos-left-2",
+    slug: "debranding-for-lease-return",
     image: b3,
     date: "23 Dec 2024",
-    title: "At vero eos",
-    description: "Sed ut perspiciatis unde ste natus error sit...",
+    title: "Debranding for Lease Return",
+    description: "Clean decal removal for resale and return...",
     content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Debranding is essential when vehicles are prepared for lease return or resale.
+      Clean decal removal protects the surface and keeps the vehicle presentable.
 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Professional debranding reduces residue, damage, and unnecessary rework.
     `,
   },
 ];
@@ -562,26 +491,30 @@ export const blogSidePostsLeft = [
 export const blogSidePostsRight = [
   {
     id: 4,
-    slug: "at-vero-eos-right-1",
+    slug: "fleet-maintenance-tips",
     image: b4,
     date: "23 Dec 2024",
-    title: "At vero eos",
-    description: "Sed ut perspiciatis unde ste natus error sit...",
+    title: "Fleet Maintenance Tips",
+    description: "Keep fleet presentation at a high standard...",
     content: `
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Regular maintenance helps fleets stay clean, professional, and road-ready.
+      Touch-ups and paint care improve long-term presentation and durability.
+
+      A maintained fleet strengthens trust and creates a better brand impression.
     `,
   },
   {
     id: 5,
-    slug: "at-vero-eos-right-2",
+    slug: "why-professional-resprays-matter",
     image: b5,
     date: "23 Dec 2024",
-    title: "At vero eos",
-    description: "Sed ut perspiciatis unde ste natus error sit...",
+    title: "Why Professional Resprays Matter",
+    description: "Strong finishes built for commercial use...",
     content: `
-      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
-      Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+      Professional resprays improve the look and protection of commercial vehicles.
+      High-quality coatings help surfaces withstand weather, grime, and road wear.
+
+      Investing in proper refinishing protects the value of fleet assets over time.
     `,
   },
 ];
@@ -592,10 +525,6 @@ export const allBlogPosts = [
   ...blogSidePostsRight,
 ];
 
-
-
-
-
 import bb1 from "../assets/images/in1.png";
 import bb2 from "../assets/images/in1.png";
 import bb3 from "../assets/images/in1.png";
@@ -603,22 +532,22 @@ import bb3 from "../assets/images/in1.png";
 export const blogIntroLeft = [
   {
     id: 1,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam",
+    text: "Fleet branding and painting help commercial vehicles maintain a clean, strong, and professional appearance on the road. A consistent fleet image builds trust and improves brand recognition across every journey.",
   },
   {
     id: 2,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam",
+    text: "Professional refinishing and debranding services also protect the long-term value of your transport assets. Proper preparation and quality coatings are essential for durable commercial fleet presentation.",
   },
 ];
 
 export const blogIntroRight = [
   {
     id: 3,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi",
+    text: "From resprays to branding updates, every fleet project requires careful planning, accurate execution, and reliable turnaround to reduce downtime.",
   },
   {
     id: 4,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi",
+    text: "VV Transcoats focuses on practical solutions that help transport operators keep their vehicles looking sharp, road-ready, and aligned with their brand.",
   },
 ];
 
@@ -627,42 +556,42 @@ export const insightCards = [
     id: 1,
     image: bb1,
     date: "20 Dec 2025",
-    author: "Lorem Ipsum",
-    title: "Complete Car Care Package",
-    description: "Premium car service with zero Transparent pricing, factory",
+    author: "VV Transcoats",
+    title: "Fleet Painting Solutions",
+    description: "Durable fleet finishes for professional road presence",
   },
   {
     id: 2,
     image: bb2,
     date: "20 Dec 2025",
-    author: "Lorem Ipsum",
-    title: "Complete Car Care Package",
-    description: "Premium car service with zero Transparent pricing, factory",
+    author: "VV Transcoats",
+    title: "Branding for Fleets",
+    description: "Consistent branding across trucks and trailers",
   },
   {
     id: 3,
     image: bb3,
     date: "20 Dec 2025",
-    author: "Lorem Ipsum",
-    title: "Complete Car Care Package",
-    description: "Premium car service with zero Transparent pricing, factory",
+    author: "VV Transcoats",
+    title: "Debranding Services",
+    description: "Clean decal removal for lease return projects",
   },
   {
     id: 4,
     image: bb3,
     date: "20 Dec 2025",
-    author: "Lorem Ipsum",
-    title: "Complete Car Care Package",
-    description: "Premium car service with zero Transparent pricing, factory",
+    author: "VV Transcoats",
+    title: "Fleet Maintenance Tips",
+    description: "Keep your vehicles clean, durable, and professional",
   },
 ];
 
 export const blogBottomLeft = {
   id: 5,
-  text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam",
+  text: "A professional fleet image supports brand visibility, customer trust, and long-term asset presentation. Quality finishes make a measurable difference in commercial transport.",
 };
 
 export const blogBottomRight = {
   id: 6,
-  text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, em aperiam, eaque ipsa quae ab illo inventore veritatis et quasi",
+  text: "Whether for branding, debranding, or repainting, the right process helps reduce downtime and keeps your fleet ready for the road.",
 };

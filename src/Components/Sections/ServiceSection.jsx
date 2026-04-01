@@ -67,25 +67,24 @@ const ServiceSection = () => {
       <div className="vv-service-shape-right"></div>
 
       <div className="container position-relative">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <motion.div
-              className="vv-service-heading text-center"
-              variants={headingVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <h2 className="vv-service-title">
-                Our <span>Services</span> Summary
-              </h2>
-              <p className="vv-service-subtitle px-4 px-md-0">
-                Expert paint and body repair services to restore your car’s
-                appearance like new.
-              </p>
-            </motion.div>
-          </div>
-        </div>
+       <div className="row justify-content-center">
+  <div className="col-lg-8">
+    <motion.div
+      className="vv-service-heading text-center"
+      variants={headingVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <h2 className="vv-service-title">
+        Our <span>Services</span> Summary
+      </h2>
+      <p className="vv-service-subtitle px-4 px-md-0">
+        Premium fleet painting, branding, and debranding solutions for commercial vehicles.
+      </p>
+    </motion.div>
+  </div>
+</div>
 
         <motion.div
           className="row g-4 justify-content-center mt-4"
@@ -116,7 +115,7 @@ const ServiceSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <Button text="View All Ours" variant="primary" />
+          <Button text="View All Ours" variant="primary" to="/service" />
         </motion.div>
       </div>
     </section>

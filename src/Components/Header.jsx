@@ -102,19 +102,19 @@ const Header = () => {
           <Container>
             <div className="d-flex align-items-center justify-content-between gap-3 vv-topbar-inner">
               <div className="d-flex align-items-center flex-wrap vv-topbar-left">
-                <div className="d-flex align-items-center vv-topbar-item">
-                  <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
-                    <FaPhoneAlt />
-                  </span>
-                  <div className="d-flex flex-column vv-topbar-text">
-                    <small>Call us</small>
-                    <strong>
-                      <a href="tel:123456789" className="vv-phone-link">
-                        123 456 789
-                      </a>
-                    </strong>
-                  </div>
-                </div>
+               <div className="d-flex align-items-center vv-topbar-item">
+  <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
+    <FaPhoneAlt />
+  </span>
+  <div className="d-flex flex-column vv-topbar-text">
+    <small>Call us</small>
+    <strong>
+      <a href="tel:+61200000000" className="vv-phone-link">
+        +61 2 0000 0000
+      </a>
+    </strong>
+  </div>
+</div>
 
                 <div className="d-flex align-items-center vv-topbar-item">
                   <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
@@ -122,7 +122,7 @@ const Header = () => {
                   </span>
                   <div className="d-flex flex-column vv-topbar-text">
                     <small>Opening Hours</small>
-                    <strong>Mon to Fri : 8.00-20.00</strong>
+                    <strong>Mon to Fri : 08.00 - 17.00</strong>
                   </div>
                 </div>
               </div>
@@ -263,10 +263,10 @@ const Header = () => {
                   <div className="d-flex flex-column vv-offcanvas-contact-text">
                     <small>Call us</small>
                     <strong>
-                      <a href="tel:123456789" className="vv-phone-link">
-                        123 456 789
-                      </a>
-                    </strong>
+  <a href="tel:+61200000000" className="vv-phone-link">
+    +61 2 0000 0000
+  </a>
+</strong>
                   </div>
                 </div>
 
@@ -276,7 +276,7 @@ const Header = () => {
                   </span>
                   <div className="d-flex flex-column vv-offcanvas-contact-text">
                     <small>Opening Hours</small>
-                    <strong>Mon to Fri : 8.00-20.00</strong>
+                    <strong>Mon to Fri : 8.00-17.00</strong>
                   </div>
                 </div>
               </div>
