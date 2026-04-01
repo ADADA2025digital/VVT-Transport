@@ -20,27 +20,44 @@ const Header = () => {
   );
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleClose = () => {
-    setShowMenu(false);
+  // Lock body scroll when offcanvas is open
+  const lockBodyScroll = () => {
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+    document.body.style.top = `-${window.scrollY}px`;
+    // Store current scroll position to restore later
+    document.body.dataset.scrollY = window.scrollY.toString();
+  };
+
+  const unlockBodyScroll = () => {
+    const scrollY = document.body.dataset.scrollY;
     document.body.style.overflow = "";
     document.body.style.position = "";
     document.body.style.width = "";
+    document.body.style.top = "";
+    if (scrollY) {
+      window.scrollTo(0, parseInt(scrollY));
+      delete document.body.dataset.scrollY;
+    }
+  };
+
+  const handleClose = () => {
+    setShowMenu(false);
+    unlockBodyScroll();
   };
 
   const handleShow = () => {
     if (window.innerWidth < 992) {
       setShowMenu(true);
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.width = "100%";
+      lockBodyScroll();
     }
   };
 
+  // Clean up on unmount
   useEffect(() => {
     return () => {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
+      unlockBodyScroll();
     };
   }, []);
 
@@ -51,9 +68,7 @@ const Header = () => {
 
       if (desktop && showMenu) {
         setShowMenu(false);
-        document.body.style.overflow = "";
-        document.body.style.position = "";
-        document.body.style.width = "";
+        unlockBodyScroll();
       }
 
       if (!desktop) {
@@ -85,6 +100,7 @@ const Header = () => {
     transform: isDesktop && isScrolled ? "translateY(-100%)" : "translateY(0)",
     opacity: isDesktop && isScrolled ? 0 : 1,
     visibility: isDesktop && isScrolled ? "hidden" : "visible",
+    transition: "all 0.4s ease",
   };
 
   const navbarStyle = {
@@ -92,29 +108,29 @@ const Header = () => {
     background: isScrolled ? "rgba(23, 23, 23, 0.95)" : "transparent",
     backdropFilter: isScrolled ? "blur(10px)" : "none",
     boxShadow: isScrolled ? "0 10px 30px rgba(0,0,0,0.25)" : "none",
+    transition: "all 0.4s ease",
   };
 
   return (
     <>
       <header className="vv-header">
-        {/* Desktop Top Bar */}
         <div className="vv-topbar d-none d-lg-block" style={topbarStyle}>
           <Container>
             <div className="d-flex align-items-center justify-content-between gap-3 vv-topbar-inner">
               <div className="d-flex align-items-center flex-wrap vv-topbar-left">
-               <div className="d-flex align-items-center vv-topbar-item">
-  <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
-    <FaPhoneAlt />
-  </span>
-  <div className="d-flex flex-column vv-topbar-text">
-    <small>Call us</small>
-    <strong>
-      <a href="tel:+61200000000" className="vv-phone-link">
-        +61 2 0000 0000
-      </a>
-    </strong>
-  </div>
-</div>
+                <div className="d-flex align-items-center vv-topbar-item">
+                  <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
+                    <FaPhoneAlt />
+                  </span>
+                  <div className="d-flex flex-column vv-topbar-text">
+                    <small>Call us</small>
+                    <strong>
+                      <a href="tel:+61200000000" className="vv-phone-link">
+                        +61 2 0000 0000
+                      </a>
+                    </strong>
+                  </div>
+                </div>
 
                 <div className="d-flex align-items-center vv-topbar-item">
                   <span className="d-inline-flex align-items-center justify-content-center vv-topbar-icon">
@@ -145,7 +161,6 @@ const Header = () => {
           </Container>
         </div>
 
-        {/* Main Navbar */}
         <Navbar expand="lg" className="vv-navbar" style={navbarStyle}>
           <Container>
             <Link
@@ -191,115 +206,118 @@ const Header = () => {
         </Navbar>
       </header>
 
-      {/* Mobile Only Offcanvas */}
-      {!isDesktop && (
-        <Offcanvas
-          show={showMenu}
-          onHide={handleClose}
-          placement="end"
-          className="vv-mobile-offcanvas vv-full-width-offcanvas"
-          backdropClassName="vv-offcanvas-backdrop"
-          scroll={false}
-          enforceFocus={true}
-          restoreFocus={true}
+      {/* Mobile Offcanvas - Full height with proper scroll locking */}
+      <Offcanvas
+        show={showMenu}
+        onHide={handleClose}
+        placement="end"
+        className="vv-mobile-offcanvas vv-full-width-offcanvas"
+        backdropClassName="vv-offcanvas-backdrop"
+        scroll={false}
+        backdrop={true}
+        enforceFocus={true}
+        restoreFocus={true}
+        style={{ height: "100dvh" }}
+      >
+        <Offcanvas.Header closeButton className="vv-offcanvas-header">
+          <Offcanvas.Title className="m-0">
+            <img src={logo} alt="VV Trans Logo" className="vv-mobile-logo" />
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+
+        <Offcanvas.Body 
+          className="d-flex flex-column justify-content-between vv-offcanvas-body"
+          style={{ 
+            height: "calc(100dvh - 90px)", 
+            overflowY: "auto",
+            padding: "2rem 1.5rem"
+          }}
         >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>
-              <img src={logo} alt="VV Trans Logo" className="vv-mobile-logo" />
-            </Offcanvas.Title>
-          </Offcanvas.Header>
+          <div className="flex-grow-1 d-flex align-items-center justify-content-center vv-offcanvas-nav-wrapper">
+            <Nav className="flex-column w-100 text-center vv-offcanvas-nav">
+              <NavLink
+                to="/"
+                end
+                className="vv-mobile-nav-link"
+                onClick={handleClose}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="vv-mobile-nav-link"
+                onClick={handleClose}
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/service"
+                className="vv-mobile-nav-link"
+                onClick={handleClose}
+              >
+                Service
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className="vv-mobile-nav-link"
+                onClick={handleClose}
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className="vv-mobile-nav-link"
+                onClick={handleClose}
+              >
+                Contact
+              </NavLink>
+            </Nav>
+          </div>
 
-          <Offcanvas.Body className="d-flex flex-column justify-content-between vv-offcanvas-body">
-            {/* Centered Navigation */}
-            <div className="flex-grow-1 d-flex align-items-center justify-content-center vv-offcanvas-nav-wrapper">
-              <Nav className="flex-column w-100 text-center vv-offcanvas-nav">
-                <NavLink
-                  to="/"
-                  end
-                  className="vv-mobile-nav-link"
-                  onClick={handleClose}
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className="vv-mobile-nav-link"
-                  onClick={handleClose}
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  to="/service"
-                  className="vv-mobile-nav-link"
-                  onClick={handleClose}
-                >
-                  Service
-                </NavLink>
-                <NavLink
-                  to="/blog"
-                  className="vv-mobile-nav-link"
-                  onClick={handleClose}
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className="vv-mobile-nav-link"
-                  onClick={handleClose}
-                >
-                  Contact
-                </NavLink>
-              </Nav>
-            </div>
-
-            {/* Topbar Details at Bottom */}
-            <div className="vv-offcanvas-footer">
-              {/* Contact Info */}
-              <div className="d-flex flex-column align-items-center vv-offcanvas-contact">
-                <div className="d-flex align-items-center justify-content-center vv-offcanvas-contact-item">
-                  <span className="d-inline-flex align-items-center justify-content-center vv-offcanvas-contact-icon">
-                    <FaPhoneAlt />
-                  </span>
-                  <div className="d-flex flex-column vv-offcanvas-contact-text">
-                    <small>Call us</small>
-                    <strong>
-  <a href="tel:+61200000000" className="vv-phone-link">
-    +61 2 0000 0000
-  </a>
-</strong>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center justify-content-center vv-offcanvas-contact-item">
-                  <span className="d-inline-flex align-items-center justify-content-center vv-offcanvas-contact-icon">
-                    <FaClock />
-                  </span>
-                  <div className="d-flex flex-column vv-offcanvas-contact-text">
-                    <small>Opening Hours</small>
-                    <strong>Mon to Fri : 8.00-17.00</strong>
-                  </div>
+          <div className="vv-offcanvas-footer">
+            <div className="d-flex flex-column align-items-center vv-offcanvas-contact">
+              <div className="d-flex align-items-center justify-content-center vv-offcanvas-contact-item">
+                <span className="d-inline-flex align-items-center justify-content-center vv-offcanvas-contact-icon">
+                  <FaPhoneAlt />
+                </span>
+                <div className="d-flex flex-column vv-offcanvas-contact-text">
+                  <small>Call us</small>
+                  <strong>
+                    <a href="tel:+61200000000" className="vv-phone-link">
+                      +61 2 0000 0000
+                    </a>
+                  </strong>
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="d-flex align-items-center justify-content-center vv-mobile-socials">
-                <a href="#" className="vv-social-link" aria-label="Instagram">
-                  <FaInstagram />
-                </a>
-                <a href="#" className="vv-social-link" aria-label="YouTube">
-                  <FaYoutube />
-                </a>
-                <a href="#" className="vv-social-link" aria-label="Facebook">
-                  <FaFacebookF />
-                </a>
-                <a href="#" className="vv-social-link" aria-label="Twitter">
-                  <FaTwitter />
-                </a>
+              <div className="d-flex align-items-center justify-content-center vv-offcanvas-contact-item">
+                <span className="d-inline-flex align-items-center justify-content-center vv-offcanvas-contact-icon">
+                  <FaClock />
+                </span>
+                <div className="d-flex flex-column vv-offcanvas-contact-text">
+                  <small>Opening Hours</small>
+                  <strong>Mon to Fri : 08.00 - 17.00</strong>
+                </div>
               </div>
             </div>
-          </Offcanvas.Body>
-        </Offcanvas>
-      )}
+
+            <div className="d-flex align-items-center justify-content-center vv-mobile-socials">
+              <a href="#" className="vv-social-link" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="#" className="vv-social-link" aria-label="YouTube">
+                <FaYoutube />
+              </a>
+              <a href="#" className="vv-social-link" aria-label="Facebook">
+                <FaFacebookF />
+              </a>
+              <a href="#" className="vv-social-link" aria-label="Twitter">
+                <FaTwitter />
+              </a>
+            </div>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 };

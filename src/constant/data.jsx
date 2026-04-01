@@ -28,9 +28,9 @@ export const heroData = [
     image: heroImage2,
   },
   {
-    titleWhite: "Complete",
-    titleHighlight: "Debranding & Restore",
-    titleBottom: "ready for next use",
+     titleWhite: "Branding",
+  titleHighlight: "Removal",
+  titleBottom: "Made Easy",
     description:
       "Clean debranding, full resprays, and restoration services to prepare vehicles for resale, lease return, or rebranding.",
     primaryBtnText: "Our Services",

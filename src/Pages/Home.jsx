@@ -63,7 +63,7 @@ const Home = () => {
           >
             {heroData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="container h-100">
+                <div className="container ">
                   <div className="row align-items-center vv-hero-row">
                     <div className="col-lg-6 col-md-12 order-2 order-lg-1">
                       <div className="vv-hero-content">
@@ -88,11 +88,11 @@ const Home = () => {
                             variant="primary"
                             to={item.primaryBtnLink}
                           />
-                          <Button
+                          {/* <Button
                             text={item.secondaryBtnText}
                             variant="primary"
                             to={item.secondaryBtnLink}
-                          />
+                          /> */}
                         </div>
 
                         <div className="d-flex align-items-center gap-3 vv-hero-arrows">

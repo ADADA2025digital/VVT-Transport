@@ -46,11 +46,11 @@ img {
   display: block;
 }
 
-.vv-home-page {
+/* .vv-home-page {
   width: 100%;
   overflow-x: hidden;
   position: relative;
-}
+} */
 
 /* =========================
    HEADER
@@ -200,7 +200,7 @@ img {
 }
 
 .vv-hero-swiper .swiper-slide {
-  min-height: 100dvh;
+  min-height: 100dvh !important;
   display: flex;
   align-items: center;
 }
@@ -220,25 +220,34 @@ img {
   transform: translateY(0);
 }
 
+.vv-offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
 /* =========================
    FULL WIDTH OFF CANVAS (MOBILE ONLY)
 ========================= */
 @media (max-width: 991.98px) {
-  .vv-full-width-offcanvas {
-    width: 100% !important;
-    max-width: 100% !important;
-    background: var(--vv-dark-2);
-    color: var(--vv-text);
-  }
+ .vv-full-width-offcanvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100dvh !important;
+  background: var(--vv-dark-2);
+  color: var(--vv-text);
+}
 
   .vv-offcanvas-backdrop {
     background-color: rgba(0, 0, 0, 0.8) !important;
   }
 
-  .vv-offcanvas-body {
-    min-height: 100vh;
-    padding: 2rem 1.5rem !important;
-  }
+ .vv-offcanvas-body {
+  min-height: calc(100dvh - 72px);
+  height: calc(100dvh - 72px);
+  padding: 2rem 1.5rem !important;
+  overflow-y: auto;
+}
 
   .vv-offcanvas-nav {
     max-width: 280px;
@@ -262,7 +271,7 @@ img {
 
   .vv-offcanvas-footer {
     padding-top: 2rem;
-    border-top: 1px solid var(--vv-border);
+    
   }
 
   .vv-offcanvas-contact {
@@ -308,11 +317,11 @@ img {
     font-size: 22px;
   }
 
-  .vv-mobile-logo {
-    max-height: 50px;
-    width: auto;
-    object-fit: contain;
-  }
+ .vv-mobile-logo {
+  max-height: 90px;   /* same as navbar logo */
+  width: auto;
+  object-fit: contain;
+}
 
   .vv-full-width-offcanvas .offcanvas-header {
     border-bottom: 1px solid var(--vv-border);
@@ -385,11 +394,9 @@ img {
 .vv-hero-section {
   position: relative;
   width: 100%;
-  height: 100dvh;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
-  align-items: center;
-  overflow: hidden;
+  align-items: stretch;
   padding: 0;
   background: linear-gradient(180deg, #121212 0%, #0f0f0f 45%, #090909 100%);
 }
@@ -403,18 +410,19 @@ img {
 .vv-hero-swiper,
 .vv-hero-swiper .swiper-wrapper,
 .vv-hero-swiper .swiper-slide {
+  min-height: 100dvh;
   height: 100%;
 }
 
 .vv-hero-row {
-  height: 100%;
+  min-height: 100dvh;
   align-items: center;
+  padding-top: 118px;
+  padding-bottom: 24px;
 }
 
 .vv-hero-content {
-  max-height: 100%;
-  overflow: hidden;
-  
+  max-width: 100%;
 }
 
 .vv-hero-title {
@@ -508,7 +516,7 @@ img {
 .vv-hero-image-wrap {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -518,7 +526,7 @@ img {
 .vv-hero-image {
   width: auto;
   max-width: 100%;
-  max-height: 90%;
+  max-height: calc(100dvh - 160px);
   margin-left: auto;
   object-fit: contain;
   filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.55));
@@ -712,19 +720,19 @@ img {
   }
 
   .vv-logo {
-    max-height: 62px;
+    max-height: 90px;
   }
 
-  .vv-hero-section {
-    min-height: 100dvh;
-    padding: 0;
-  }
+.vv-hero-section {
+  min-height: 100dvh;
+  padding: 0;
+}
 
-  .vv-hero-row {
-    min-height: 100dvh;
-    padding-top: 130px;
-    padding-bottom: 50px;
-  }
+.vv-hero-row {
+  min-height: 100dvh;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
 
   .vv-hero-content {
     max-width: 100%;
@@ -747,15 +755,16 @@ img {
     justify-content: center;
   }
 
-  .vv-hero-image-wrap {
-    text-align: center !important;
-  }
+ .vv-hero-image-wrap {
+  justify-content: center;
+  text-align: center !important;
+}
 
-  .vv-hero-image {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
+.vv-hero-image {
+  max-width: 520px;
+  max-height: calc(100dvh - 220px);
+  margin: 0 auto;
+}
   .vv-footer-row {
     text-align: center;
   }
@@ -784,10 +793,11 @@ img {
     font-size: 18px;
   }
 
-  .vv-hero-image {
-    width: 100%;
-    max-width: 430px;
-  }
+ .vv-hero-image {
+  width: 100%;
+  max-width: 430px;
+  max-height: calc(100dvh - 260px);
+}
 }
 
 @media (max-width: 575.98px) {
@@ -803,11 +813,11 @@ img {
     font-size: 15px;
   }
 
-  .vv-hero-row {
-    min-height: 100dvh;
-    padding-top: 120px;
-    padding-bottom: 30px;
-  }
+.vv-hero-row {
+  min-height: 100dvh;
+  padding-top: 96px;
+  padding-bottom: 24px;
+}
 
   .vv-hero-title {
     font-size: 28px;
