@@ -42,9 +42,9 @@ function Service() {
         />
 
         <OfferSection />
-        <ExpertiseSection />
+        {/* <ExpertiseSection /> */}
 
-        <section className="vv-pricing-section py-5">
+        {/* <section className="vv-pricing-section py-5">
           <div className="container">
             <motion.div
               className="row g-4 justify-content-center"
@@ -72,7 +72,7 @@ function Service() {
               ))}
             </motion.div>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );

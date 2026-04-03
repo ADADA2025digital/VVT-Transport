@@ -126,7 +126,7 @@ const ArticleSection = () => {
               <div className="vv-article-main-overlay"></div>
 
               <div className="vv-article-main-content">
-                <h3 className="vv-article-main-title">
+                <h3 className="vv-article-main-title ">
                   {blogFeaturedPost.title}
                 </h3>
                 <p className="vv-article-main-text">

@@ -101,8 +101,8 @@ function AboutUs() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   {/* SMALL IMAGES */}
-                  <motion.div className="about-v3-small" variants={imageItemVariant}>
-                    <motion.div className="about-v3-small-img" variants={imageItemVariant}>
+                  <motion.div className="about-v3-small gap-1" variants={imageItemVariant}>
+                    <motion.div className="about-v3-small-img " variants={imageItemVariant}>
                       <img src={aboutImg1} alt="" />
                     </motion.div>
 

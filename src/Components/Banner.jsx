@@ -12,7 +12,7 @@ const Banner = ({
         <div className="row justify-content-center">
           <div className="col-12 col-lg-8">
             <div className="vv-banner-content">
-              <h1 className="vv-banner-title mb-3">{title}</h1>
+              <h1 className="vv-banner-title mb-3 mt-4 mt-md-0">{title}</h1>
 
               <p className="vv-banner-subtitle mb-3 mb-md-4">
                 {subtitle}

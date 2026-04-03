@@ -7,9 +7,9 @@ function Contact() {
     <>
       <div className="container-fluid p-0 vv-about-page">
         <Banner
-          title="Contact"
+          title="Request a Service Quote"
           subtitle="Protection, color change, and restoration crafted for enthusiasts"
-          currentPage="Contact"
+          currentPage="Request a Quote"
         />
 
         <ContactSection />

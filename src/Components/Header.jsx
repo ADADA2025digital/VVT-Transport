@@ -9,7 +9,7 @@ import {
   FaFacebookF,
   FaTwitter,
 } from "react-icons/fa";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo3.png";
 
 const TOPBAR_HEIGHT = 68;
 
@@ -105,7 +105,7 @@ const Header = () => {
 
   const navbarStyle = {
     top: isDesktop ? (isScrolled ? "0px" : `${TOPBAR_HEIGHT}px`) : "0px",
-    background: isScrolled ? "rgba(23, 23, 23, 0.95)" : "transparent",
+    background: isScrolled ? "rgba(46, 45, 45, 0.95)" : "transparent",
     backdropFilter: isScrolled ? "blur(10px)" : "none",
     boxShadow: isScrolled ? "0 10px 30px rgba(0,0,0,0.25)" : "none",
     transition: "all 0.4s ease",
@@ -161,8 +161,26 @@ const Header = () => {
           </Container>
         </div>
 
-        <Navbar expand="lg" className="vv-navbar" style={navbarStyle}>
-          <Container>
+        <Navbar
+          expand="lg"
+          className="vv-navbar"
+          style={{
+            ...navbarStyle,
+            height: isDesktop ? (isScrolled ? "90px" : "150px") : "90px",
+            backgroundColor: isDesktop ? navbarStyle.background : "#1a1a1a", // <-- mobile header color
+            transition: "all 0.4s ease",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Container
+            style={{
+              height: isDesktop ? (isScrolled ? "90px" : "150px") : "70px", // mobile height
+
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Link
               to="/"
               className="d-inline-flex align-items-center text-decoration-none vv-logo-wrap"
@@ -171,6 +189,12 @@ const Header = () => {
                 src={logo}
                 alt="VV Trans Logo"
                 className="vv-logo img-fluid"
+                style={{
+                  height: isDesktop ? (isScrolled ? "70px" : "100px") : "50px", // smaller on mobile
+                  width: "auto",
+                  transition: "all 0.4s ease",
+                  objectFit: "contain",
+                }}
               />
             </Link>
 
@@ -197,8 +221,8 @@ const Header = () => {
                 <NavLink to="/blog" className="vv-nav-link">
                   Blog
                 </NavLink>
-                <NavLink to="/contact" className="vv-nav-link">
-                  Contact
+                <NavLink to="/RequestQuote" className="vv-nav-link">
+                  Request a Quote
                 </NavLink>
               </Nav>
             </Navbar.Collapse>
@@ -219,18 +243,35 @@ const Header = () => {
         restoreFocus={true}
         style={{ height: "100dvh" }}
       >
-        <Offcanvas.Header closeButton className="vv-offcanvas-header">
+        <Offcanvas.Header
+          closeButton
+          className="vv-offcanvas-header d-flex align-items-center justify-content-between"
+          style={{
+            height: "70px",
+            padding: "0 1.5rem",
+            backgroundColor: "#1a1a1a", // mobile header color
+          }}
+        >
           <Offcanvas.Title className="m-0">
-            <img src={logo} alt="VV Trans Logo" className="vv-mobile-logo" />
+            <img
+              src={logo}
+              alt="VV Trans Logo"
+              className="vv-mobile-logo"
+              style={{
+                height: "50px", // same as mobile logo height in navbar
+                width: "auto",
+                objectFit: "contain",
+              }}
+            />
           </Offcanvas.Title>
         </Offcanvas.Header>
 
-        <Offcanvas.Body 
+        <Offcanvas.Body
           className="d-flex flex-column justify-content-between vv-offcanvas-body"
-          style={{ 
-            height: "calc(100dvh - 90px)", 
+          style={{
+            height: "calc(100dvh - 90px)",
             overflowY: "auto",
-            padding: "2rem 1.5rem"
+            padding: "2rem 1.5rem",
           }}
         >
           <div className="flex-grow-1 d-flex align-items-center justify-content-center vv-offcanvas-nav-wrapper">
@@ -265,11 +306,11 @@ const Header = () => {
                 Blog
               </NavLink>
               <NavLink
-                to="/contact"
+                to="/RequestQuote"
                 className="vv-mobile-nav-link"
                 onClick={handleClose}
               >
-                Contact
+                Request a Quote
               </NavLink>
             </Nav>
           </div>

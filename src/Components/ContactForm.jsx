@@ -99,7 +99,7 @@ const ContactForm = () => {
 
   return (
     <div className="vv-contact-form-box">
-      <h3 className="vv-contact-form-title">Book Your Service</h3>
+      <h3 className="vv-contact-form-title">Request a Service Quote</h3>
       <p className="vv-contact-form-subtitle">
         Sed ut perspiciatis unde omnis iste voluptatem accusantium
       </p>

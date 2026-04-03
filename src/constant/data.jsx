@@ -267,21 +267,25 @@ import service1 from "../assets/images/service1.png";
 import service2 from "../assets/images/service1.png";
 import service3 from "../assets/images/service1.png";
 import service4 from "../assets/images/service1.png";
+import service5 from "../assets/images/service1.png";
+import service6 from "../assets/images/service1.png";
+import service7 from "../assets/images/service1.png";
+import service8 from "../assets/images/service1.png";
 
 export const serviceOfferData = [
   {
     id: 1,
     image: service1,
-    title: "Fleet Painting",
+    title: "Commercial Vehicle Painting",
     description:
-      "Professional spray painting for trucks and commercial fleet vehicles",
+      "Premium spray painting services for trucks, trailers, and vans using industry-leading coatings.",
     price: "Quote",
     duration: "N/A",
     features: [
-      "Fleet Specialists",
-      "Fast Turnaround",
-      "Durable Finishes",
-      "All Vehicle Types",
+      "Premium spray painting services",
+      "Trucks, trailers, vans",
+      "Industry-leading coatings",
+      "Commercial vehicles",
     ],
   },
   {
@@ -289,48 +293,110 @@ export const serviceOfferData = [
     image: service2,
     title: "Fleet Branding",
     description:
-      "Accurate logo and branding solutions for commercial transport fleets",
+      "Transforming your vehicles into powerful marketing assets with precise logo application and custom color schemes.",
     price: "Quote",
     duration: "N/A",
     features: [
-      "Logo Precision",
-      "Brand Consistency",
-      "Professional Finish",
-      "All Fleet Sizes",
+      "Precise logo application",
+      "Custom color schemes",
+      "Marketing assets",
+      "Fleet vehicles",
     ],
   },
   {
     id: 3,
     image: service3,
-    title: "Debranding",
+    title: "Professional Debranding",
     description:
-      "Clean removal of decals and branding for resale or lease return",
+      "Clean and efficient removal of existing branding, preparing vehicles for resale or lease return.",
     price: "Quote",
     duration: "N/A",
     features: [
-      "No Residue",
-      "Clean Finish",
-      "Quick Service",
-      "Lease Ready",
+      "Clean removal",
+      "Efficient removal",
+      "Resale preparation",
+      "Lease return ready",
     ],
   },
   {
     id: 4,
     image: service4,
-    title: "Restoration",
+    title: "Restoration & Refurbishment",
     description:
-      "Refurbishment of damaged or faded commercial vehicles",
+      "Bringing tired or weathered commercial vehicles back to showroom quality.",
     price: "Quote",
     duration: "N/A",
     features: [
-      "Surface Repair",
-      "Paint Refresh",
-      "Professional Finish",
-      "Long Lasting",
+      "Vehicle restoration",
+      "Refurbishment",
+      "Showroom quality",
+      "Commercial vehicles",
+    ],
+  },
+
+  // ✅ ADDITIONAL SERVICES FROM DOCUMENT
+
+  {
+    id: 5,
+    image: service1,
+    title: "Custom Commercial Spray Painting",
+    description:
+      "Utilizing advanced color-matching technology and high-performance coatings to ensure your brand colors are consistent across every vehicle in your fleet.",
+    price: "Quote",
+    duration: "N/A",
+    features: [
+      "Advanced color-matching technology",
+      "High-performance coatings",
+      "Brand color consistency",
+      "Fleet vehicles",
+    ],
+  },
+  {
+    id: 6,
+    image: service2,
+    title: "Corporate Branding & Livery",
+    description:
+      "From simple logos to full-scale fleet identity rollouts. We work closely with our clients to ensure every decal and paint line aligns perfectly with corporate guidelines.",
+    price: "Quote",
+    duration: "N/A",
+    features: [
+      "Simple logos",
+      "Full-scale fleet identity",
+      "Decal alignment",
+      "Corporate guidelines",
+    ],
+  },
+  {
+    id: 7,
+    image: service3,
+    title: "Debranding & Lease Returns",
+    description:
+      "We provide meticulous debranding services, removing all traces of previous ownership and restoring the vehicle’s neutral appearance—essential for maintaining resale value or meeting lease-end requirements.",
+    price: "Quote",
+    duration: "N/A",
+    features: [
+      "Meticulous debranding",
+      "Remove previous ownership traces",
+      "Neutral appearance",
+      "Lease-end requirements",
+    ],
+  },
+  {
+    id: 8,
+    image: service4,
+    title: "Fleet Maintenance Programs",
+    description:
+      "Proactive touch-ups and refinishing to prevent corrosion and keep your brand's \"moving billboards\" in peak condition.",
+    price: "Quote",
+    duration: "N/A",
+    features: [
+      "Proactive touch-ups",
+      "Refinishing",
+      "Prevent corrosion",
+      "Peak condition",
     ],
   },
 ];
-
 import exp1 from "../assets/images/ex1.png";
 import exp2 from "../assets/images/ex1.png";
 
@@ -433,6 +499,27 @@ export const pricingData = [
   },
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import b1 from "../assets/images/b1.png";
 import b2 from "../assets/images/b2.png";
 import b3 from "../assets/images/b2.png";
@@ -446,14 +533,17 @@ export const blogFeaturedPost = {
   date: "20 Dec 2025",
   title: "Fleet Painting & Branding",
   description:
-    "Professional fleet painting and branding services designed for durability and long-term performance on the road..........",
+    "Professional fleet painting and branding solutions that help commercial vehicles look sharp, durable, and road-ready while strengthening brand visibility.",
   content: `
-    Fleet painting and branding play a major role in maintaining a professional business image.
+At VV Transcoats, fleet painting and branding are more than just visual upgrades. They are an essential part of how transport businesses present themselves to customers, partners, and the public every day on the road. A clean, professionally finished fleet immediately creates a strong first impression and reflects the reliability of the company behind it.
 
-    A well-maintained fleet improves brand visibility and customer trust.
-    Regular maintenance ensures long-lasting performance and durability.
+Commercial vehicles face constant exposure to harsh weather, dust, road grime, and heavy daily usage. Because of this, paint quality and surface preparation are critical. VV Transcoats focuses on proper preparation, high-quality coatings, and careful finishing to ensure every vehicle receives a durable surface that performs well over time while maintaining a polished appearance.
 
-    Investing in professional services helps protect your vehicles and enhances your company’s presence.
+Branding is equally important for businesses that want their fleet to act as a moving advertisement. Consistent colours, accurate logo placement, and a neat overall finish help each vehicle represent the business in a professional and memorable way. When multiple vehicles carry the same high standard of presentation, it strengthens recognition and builds customer trust across every journey.
+
+A professionally painted and branded fleet also helps protect the long-term value of commercial assets. Regular refinishing, touch-ups, and branding updates reduce the visual impact of wear and keep vehicles looking maintained and business-ready. VV Transcoats delivers practical fleet solutions designed for transport operators who want lasting quality, strong presentation, and dependable workmanship.
+
+Whether it is a complete respray, fleet rebranding, touch-up work, or debranding before resale or lease return, the goal is always the same: to keep vehicles looking professional, protected, and aligned with the business image. With the right refinishing process, fleet owners can reduce downtime, improve appearance, and maintain a stronger presence on the road.
   `,
 };
 
@@ -462,28 +552,36 @@ export const blogSidePostsLeft = [
     id: 2,
     slug: "fleet-branding-process",
     image: b2,
-    date: "23 Dec 2024",
+    date: "23 Dec 2025",
     title: "Fleet Branding Process",
-    description: "Professional branding methods for heavy vehicles...",
+    description:
+      "A professional fleet branding process ensures every vehicle carries a consistent and high-quality business identity.",
     content: `
-      Fleet branding helps businesses create a strong and consistent image on the road.
-      Accurate logo placement and colour matching improve brand visibility.
+Fleet branding starts with understanding the vehicle type, brand guidelines, and the finish required for long-term road use. At VV Transcoats, every branding project begins with careful planning so that logos, colours, and layout work effectively across the entire fleet.
 
-      A professional branding process ensures every vehicle reflects the same corporate identity.
+Surface preparation is one of the most important parts of the process. Without proper cleaning, correction, and preparation, even the best branding materials may not deliver the required durability or finish. A strong foundation ensures cleaner application and better long-term performance.
+
+Consistency across the fleet is what makes branding effective. When every truck, trailer, or commercial vehicle follows the same visual standard, the business looks more organised and professional. This also improves customer confidence and strengthens brand recall.
+
+A good fleet branding process is not only about appearance. It is about creating a durable, practical, and professional result that supports the day-to-day image of the business on every road and at every stop.
     `,
   },
   {
     id: 3,
     slug: "debranding-for-lease-return",
     image: b3,
-    date: "23 Dec 2024",
+    date: "24 Dec 2025",
     title: "Debranding for Lease Return",
-    description: "Clean decal removal for resale and return...",
+    description:
+      "Clean and careful debranding helps vehicles return to a presentable condition for lease return, resale, or reallocation.",
     content: `
-      Debranding is essential when vehicles are prepared for lease return or resale.
-      Clean decal removal protects the surface and keeps the vehicle presentable.
+Debranding is a critical step when a commercial vehicle reaches the end of a lease period or is prepared for resale. Old graphics, decals, and branding materials need to be removed properly to avoid damage, uneven surfaces, or visible residue.
 
-      Professional debranding reduces residue, damage, and unnecessary rework.
+At VV Transcoats, debranding is handled with care so the original surface is protected as much as possible. Removing branding without the correct process can leave adhesive marks, paint damage, or patchy finishes that reduce the overall presentation of the vehicle.
+
+Professional debranding helps save time and avoids unnecessary repainting or repair work. It also makes the vehicle more suitable for its next purpose, whether that is lease return, resale, or a new company branding update.
+
+A clean debranded vehicle looks more presentable and often holds better value. With the right removal methods and finishing care, businesses can complete the transition smoothly and maintain a professional standard.
     `,
   },
 ];
@@ -493,28 +591,36 @@ export const blogSidePostsRight = [
     id: 4,
     slug: "fleet-maintenance-tips",
     image: b4,
-    date: "23 Dec 2024",
+    date: "25 Dec 2025",
     title: "Fleet Maintenance Tips",
-    description: "Keep fleet presentation at a high standard...",
+    description:
+      "Simple maintenance practices can help fleets stay cleaner, stronger, and more professional for longer.",
     content: `
-      Regular maintenance helps fleets stay clean, professional, and road-ready.
-      Touch-ups and paint care improve long-term presentation and durability.
+Fleet presentation does not depend only on major paintwork. Ongoing maintenance plays a huge role in keeping vehicles looking neat and road-ready throughout the year. Small efforts made consistently can prevent bigger appearance issues later.
 
-      A maintained fleet strengthens trust and creates a better brand impression.
+Regular washing removes dust, grime, and road contaminants that slowly affect painted surfaces. It is also important to check for chips, scratches, and early signs of wear before they develop into more visible damage. Fast attention to minor issues helps preserve the overall finish.
+
+Businesses should also review branding areas, edges, and high-contact surfaces regularly. These parts often experience more wear due to weather and constant use. Maintaining them keeps the fleet image consistent and avoids a neglected appearance.
+
+At VV Transcoats, the focus is always on helping operators maintain a high standard of fleet presentation. A well-maintained vehicle not only looks better but also reflects the professionalism and care of the business behind it.
     `,
   },
   {
     id: 5,
     slug: "why-professional-resprays-matter",
     image: b5,
-    date: "23 Dec 2024",
+    date: "26 Dec 2025",
     title: "Why Professional Resprays Matter",
-    description: "Strong finishes built for commercial use...",
+    description:
+      "Professional resprays improve both appearance and protection for commercial vehicles operating in demanding conditions.",
     content: `
-      Professional resprays improve the look and protection of commercial vehicles.
-      High-quality coatings help surfaces withstand weather, grime, and road wear.
+Commercial vehicles work in challenging environments every day, and over time their exterior finish can lose its original appearance. Fading, scratches, surface wear, and general ageing can make even reliable vehicles look tired and poorly maintained.
 
-      Investing in proper refinishing protects the value of fleet assets over time.
+A professional respray gives the vehicle a fresh, clean, and more valuable appearance. More importantly, it provides renewed surface protection that helps the bodywork handle daily exposure to weather, road conditions, and heavy use more effectively.
+
+The quality of a respray depends heavily on preparation, product selection, and finishing skill. At VV Transcoats, attention is given to each stage so that the result is not only visually impressive but also suitable for commercial performance and long-term durability.
+
+For businesses managing a fleet, professional resprays are an investment in both image and asset care. A strong finish supports brand presentation, protects the vehicle surface, and helps maintain a better standard across the fleet.
     `,
   },
 ];
@@ -525,32 +631,17 @@ export const allBlogPosts = [
   ...blogSidePostsRight,
 ];
 
+
+
+
+
+
+
+
+
 import bb1 from "../assets/images/in1.png";
 import bb2 from "../assets/images/in1.png";
 import bb3 from "../assets/images/in1.png";
-
-export const blogIntroLeft = [
-  {
-    id: 1,
-    text: "Fleet branding and painting help commercial vehicles maintain a clean, strong, and professional appearance on the road. A consistent fleet image builds trust and improves brand recognition across every journey.",
-  },
-  {
-    id: 2,
-    text: "Professional refinishing and debranding services also protect the long-term value of your transport assets. Proper preparation and quality coatings are essential for durable commercial fleet presentation.",
-  },
-];
-
-export const blogIntroRight = [
-  {
-    id: 3,
-    text: "From resprays to branding updates, every fleet project requires careful planning, accurate execution, and reliable turnaround to reduce downtime.",
-  },
-  {
-    id: 4,
-    text: "VV Transcoats focuses on practical solutions that help transport operators keep their vehicles looking sharp, road-ready, and aligned with their brand.",
-  },
-];
-
 export const insightCards = [
   {
     id: 1,

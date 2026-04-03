@@ -27,48 +27,22 @@ const Footer = () => {
                 <p className="vv-footer-text">
                   dislike men who are so beguiled and demoralized by the charms.
                 </p>
-
-                <div className="vv-footer-social">
-                  <a href="#">
-                    <FaInstagram />
-                  </a>
-                  <a href="#">
-                    <FaYoutube />
-                  </a>
-                  <a href="#">
-                    <FaFacebookF />
-                  </a>
-                  <a href="#">
-                    <FaTwitter />
-                  </a>
-                </div>
               </div>
 
               {/* CONTACT */}
               <div className="col-lg-3 col-md-6 col-12 vv-footer-col text-lg-start text-center">
-                <h5 className="vv-footer-title">Contact</h5>
+                <h5 className="vv-footer-title">Our Services</h5>
 
-                <div className="vv-footer-contact">
-                  <a href="tel:+61200000000" className="vv-footer-link">
-                    +61 2 0000 0000
-                  </a>
-
-                  <a
-                    href="mailto:info@vvtranscoats.au"
-                    className="vv-footer-link"
-                  >
-                    info@vvtranscoats.au
-                  </a>
-
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Factory+10+13+Swaffham+Road+Minto+NSW+2566"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="vv-footer-link"
-                  >
-                    Factory 10/13 Swaffham Road, Minto NSW
-                  </a>
-                </div>
+                <ul className="vv-footer-list">
+                  <li>Commercial Vehicle Painting</li>
+                  <li>Fleet Branding</li>
+                  <li>Professional Debranding</li>
+                  <li>Restoration & Refurbishment</li>
+                  <li>Custom Commercial Spray Painting</li>
+                  <li>Corporate Branding & Livery</li>
+                  <li>Debranding & Lease Returns</li>
+                  <li>Fleet Maintenance Programs</li>
+                </ul>
               </div>
 
               {/* QUICK LINKS */}
@@ -106,27 +80,55 @@ const Footer = () => {
 
               {/* SERVICES */}
               <div className="col-lg-3 col-md-6 col-12 vv-footer-col text-lg-start text-center">
-                <h5 className="vv-footer-title">Our Services</h5>
+                <h5 className="vv-footer-title">Contact</h5>
 
-                <ul className="vv-footer-list">
-                  <li>At vero eos et accuss</li>
-                  <li>At vero eos et accusamus</li>
-                  <li>At vero eos et</li>
-                  <li>At vero eos erfet</li>
-                  <li>At vero eos et accusa</li>
-                  <li>At vero eos et accusamus</li>
-                </ul>
+                <div className="vv-footer-contact">
+                  <a href="tel:+61200000000" className="vv-footer-link">
+                    +61 2 0000 0000
+                  </a>
+
+                  <a
+                    href="mailto:info@vvtranscoats.au"
+                    className="vv-footer-link"
+                  >
+                    info@vvtranscoats.au
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Factory+10+13+Swaffham+Road+Minto+NSW+2566"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vv-footer-link"
+                  >
+                    Factory 10/13 Swaffham Road, Minto NSW
+                  </a>
+
+                  <div className="vv-footer-social">
+                    <a href="#">
+                      <FaInstagram />
+                    </a>
+                    <a href="#">
+                      <FaYoutube />
+                    </a>
+                    <a href="#">
+                      <FaFacebookF />
+                    </a>
+                    <a href="#">
+                      <FaTwitter />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* BOTTOM LINE */}
           <div className="vv-footer-bottom">
-         <div className="container text-center">
-  <p className="mb-0">
-    Copyright © {new Date().getFullYear()}. All rights Reserved
-  </p>
-</div>
+            <div className="container text-center">
+              <p className="mb-0">
+                Copyright © {new Date().getFullYear()}. All rights Reserved
+              </p>
+            </div>
           </div>
         </div>
       </div>

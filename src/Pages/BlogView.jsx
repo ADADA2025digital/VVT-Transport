@@ -1,13 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Banner from "../Components/Banner";
-
 import Button from "../Components/Button";
-
-// import bw1 from "../assets/images/ser2.png";
-// import bw2 from "../assets/images/wrk2.png";
-// import bw3 from "../assets/images/wrk3.png";
-
 import { allBlogPosts } from "../constant/data";
 
 function BlogView() {
@@ -24,7 +18,7 @@ function BlogView() {
           currentPage="BlogView"
         />
 
-        <section className="vv-blog-view-section py-5 ">
+        <section className="vv-blog-view-section py-5">
           <div className="container text-center">
             <h2 className="vv-blog-view-notfound-title">Blog Not Found</h2>
             <p className="vv-blog-view-notfound-text">
@@ -46,98 +40,98 @@ function BlogView() {
         .filter((item) => item.trim() !== "")
     : [];
 
-  return (
-    <>
-      <div className="container-fluid p-0 vv-about-page ">
-        <Banner
-          title="Articles"
-          subtitle="Protection, color change, and restoration crafted for enthusiasts"
-          currentPage={`Blog / ${blog.title}`}
-        />
+  const relatedBlogs = allBlogPosts.filter((item) => item.slug !== slug).slice(0, 4);
 
-        <section className=" py-5">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-10">
-                <div className="vv-blog-view-wrapper">
-                  <div className="vv-blog-view-main-image-wrap">
+  return (
+    <div className="container-fluid p-0 vv-about-page">
+      <Banner
+        title="Articles"
+        subtitle="Protection, color change, and restoration crafted for enthusiasts"
+        currentPage={`Blog / ${blog.title}`}
+      />
+
+      <section className="vv-blog-view-section py-5">
+        <div className="container">
+          <div className="row g-4">
+            {/* LEFT CONTENT */}
+            <div className="col-lg-8">
+              <div className="vv-blog-view-wrapper">
+                <div className="vv-blog-view-meta">
+                  <span className="vv-blog-view-date">{blog.date}</span>
+                </div>
+
+                <h1 className="vv-blog-view-title">{blog.title}</h1>
+
+                <p className="vv-blog-view-short-desc">{blog.description}</p>
+
+                <div className="vv-blog-view-article">
+                  <div className="vv-blog-view-float-image-wrap">
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      className="img-fluid vv-blog-view-main-image"
+                      className="vv-blog-view-float-image"
                     />
                   </div>
 
-                  <div className="vv-blog-view-meta text-center ">
-                    <span className="vv-blog-view-date">{blog.date}</span>
-                  </div>
-
-                  <h1 className="vv-blog-view-title text-center ">
-                    {blog.title}
-                  </h1>
-
-                  <p className="vv-blog-view-short-desc text-center">
-                    {blog.description}
-                  </p>
-
-                  <div className="vv-blog-view-content text-center px-3 px-md-0 ">
-                    {paragraphs.length > 0 ? (
-                      paragraphs.map((para, index) => (
-                        <p key={index} className="vv-blog-view-paragraph">
-                          {para}
-                        </p>
-                      ))
-                    ) : (
-                      <p className="vv-blog-view-paragraph">
-                        {blog.description}
+                  {paragraphs.length > 0 ? (
+                    paragraphs.map((para, index) => (
+                      <p key={index} className="vv-blog-view-paragraph">
+                        {para}
                       </p>
-                    )}
-                  </div>
+                    ))
+                  ) : (
+                    <p className="vv-blog-view-paragraph">{blog.description}</p>
+                  )}
 
-                  {/* <div className="row g-4 vv-blog-view-gallery">
-                    <div className="col-md-4">
-                      <div className="vv-blog-view-gallery-card">
+                  <div className="vv-blog-view-clear"></div>
+                </div>
+
+                <div className="d-flex justify-content-start mt-4">
+                  <Link to="/blog">
+                    <Button text="Back to Blog" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT SIDEBAR */}
+            <div className="col-lg-4">
+              <div className="vv-blog-sidebar">
+                <h3 className="vv-blog-sidebar-title">Other Articles</h3>
+
+                <div className="vv-blog-sidebar-list">
+                  {relatedBlogs.map((item) => (
+                    <Link
+                      key={item.id}
+                      to={`/blog/${item.slug}`}
+                      className="vv-blog-sidebar-card"
+                    >
+                      <div className="vv-blog-sidebar-image-wrap">
                         <img
-                          src={bw1}
-                          alt="Blog gallery 1"
-                          className="img-fluid vv-blog-view-gallery-image"
+                          src={item.image}
+                          alt={item.title}
+                          className="vv-blog-sidebar-image"
                         />
                       </div>
-                    </div>
 
-                    <div className="col-md-4">
-                      <div className="vv-blog-view-gallery-card">
-                        <img
-                          src={bw2}
-                          alt="Blog gallery 2"
-                          className="img-fluid vv-blog-view-gallery-image"
-                        />
+                      <div className="vv-blog-sidebar-content">
+                        <span className="vv-blog-sidebar-date">{item.date}</span>
+                        <h4 className="vv-blog-sidebar-card-title">
+                          {item.title}
+                        </h4>
+                        <p className="vv-blog-sidebar-card-text">
+                          {item.description}
+                        </p>
                       </div>
-                    </div>
-
-                    <div className="col-md-4">
-                      <div className="vv-blog-view-gallery-card">
-                        <img
-                          src={bw3}
-                          alt="Blog gallery 3"
-                          className="img-fluid vv-blog-view-gallery-image"
-                        />
-                      </div>
-                    </div>
-                  </div> */}
-
-                  <div className="d-flex justify-content-center">
-                    <Link to="/blog">
-                      <Button text="Back to Blog" />
                     </Link>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 }
 

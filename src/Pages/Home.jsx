@@ -231,9 +231,9 @@ const Home = () => {
                         to="/service"
                       />
                       <Button
-                        text="Contact Us"
+                        text="Request a Quote"
                         variant="primary"
-                        to="/contact"
+                        to="/RequestQuote"
                       />
                     </div>
                   </div>
@@ -277,7 +277,7 @@ const Home = () => {
         {/* contactussection */}
         <section className="vv-contact-section">
           <div className="container">
-            <div className="row g-0 align-items-stretch vv-contact-row">
+            <div className="row g-0 align-items-stretch vv-contact-row gap-2 gap-md-0">
               <motion.div
                 className="col-lg-7 d-flex pe-lg-2"
                 variants={fadeUp}
@@ -342,8 +342,8 @@ const Home = () => {
                         </ul>
 
                         <div className="vv-contact-btn-wrap">
-                          <Link to="/contact" className="vv-contact-more-btn">
-                            Get a Quote
+                          <Link to="/RequestQuote" className="vv-contact-more-btn">
+                            Request a Quote
                           </Link>
                         </div>
                       </div>
